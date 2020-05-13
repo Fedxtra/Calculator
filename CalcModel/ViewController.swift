@@ -8,90 +8,240 @@
 
 import UIKit
 
-class CalcModel
+/*class CalcController
 {
-    var num1: Double = 0;
-    var num2: Double = 0;
-    let currentState = calculationState.clear;
-    func NUMBERS (inputNum: Double)
+    
+    let Calculator = CalcModel();
+    
+    
+    
+    func refreshView()
     {
-        if (currentState == calculationState.clear)
-        {
-            num1 = inputNum;
-        }
-        else if (currentState == calculationState.num1)
-        {
-            if (inputNum != 0 && num1 != 0)
-            {
-                num1 += inputNum;
-            }
-        }
-        else if (currentState == calculationState.mathAction_Entered)
-        {
-            num2 = inputNum;
-        }
-        else if (currentState == calculationState.num2)
-        {
-            if (inputNum != 0 && num2 != 0)
-            {
-                num2 += inputNum;
-            }
-        }
-        else if (currentState == calculationState.result)
-        {
-            num1 = inputNum;
-        }
+        /*switch Calculator.currentState {
+        case .num1:
+            label.text = Calculator.num1;
+            
+        case .mathAction_Entered:
+            
+        default:
+            <#code#>
+        }*/
     }
-    func DOT ()
+    
+    
+    
+    func digitPressed(_ sender: UIButton)
     {
-        var dotEntered: Bool;
-        if (currentState == calculationState.clear)
+        print(sender.tag)
+        Calculator.NUMBERS(inputNum: String(sender.tag));
+        refreshView()
+    }
+    
+    
+//    @IBAction func C(_ sender: UIButton)
+//    {
+//        Calculator.C();
+//    }
+//
+//
+//    @IBAction func PLUS_MINUS(_ sender: UIButton)
+//    {
+//        Calculator.PLUS_MINUS();
+//    }
+//
+//
+//    @IBAction func DELETE(_ sender: UIButton)
+//    {
+//        Calculator.DEL();
+//    }
+//
+//
+//    @IBAction func mathActionEntered(_ sender: UIButton)
+//    {
+//        let inputSign: String?;
+//        switch sender.tag
+//        {
+//        case 13:
+//            inputSign = "/";
+//        case 14:
+//            inputSign = "*";
+//        case 15:
+//            inputSign = "-";
+//        case 16:
+//            inputSign = "+";
+//        default:
+//            inputSign = nil;
+//        }
+//        Calculator.MATH_ACTIONS(newSign: inputSign ?? "Error");
+//    }
+//
+//    @IBAction func EQUAL(_ sender: UIButton)
+//    {
+//        Calculator.EQUAL();
+//    }
+//
+//
+//    @IBAction func DOT(_ sender: UIButton)
+//    {
+//        Calculator.DOT();
+//    }
+//
+//
+//    @IBOutlet weak var label: UILabel!
+//
+//
+//
+//    @IBOutlet weak var divideButton: UIButton!
+//
+//    @IBAction func toggledButton(_ sender: UIButton)
+//    {
+//        divideButton.isSelected.toggle();
+//        if (divideButton.isSelected)
+//        {
+//            divideButton.backgroundColor = UIColor.red;
+//        }
+//        else if (!divideButton.isSelected)
+//        {
+//            divideButton.backgroundColor = UIColor.orange;
+//        }
+//    }
+}*/
+
+
+
+class ViewController: UIViewController {
+    let model = CalcModel()
+    
+    @IBOutlet weak var mainLabel: CustomLabel!
+    /*@IBAction func toggledButton(_ sender: UIButton)
+    {
+        divideButton.isSelected.toggle();
+        if (divideButton.isSelected)
         {
-            dotEntered = true;
+            divideButton.backgroundColor = UIColor.red;
         }
-        else if (currentState == calculationState.num1)
+        else if (!divideButton.isSelected)
         {
-            if
+            divideButton.backgroundColor = UIColor.orange;
         }
-        else if (currentState == calculationState.mathAction_Entered)
-        {
-                  
-        }
-        else if (currentState == calculationState.num2)
-        {
-                
-        }
-        else if (currentState == calculationState.result)
-        {
-               
+    }*/
+    
+    @IBAction func onDigitPressed(_ sender: UIButton) {
+        print(sender.tag)
+        
+        model.NUMBERS(String(sender.tag))
+        self.refreshView()
+    }
+    @IBAction func onClearPressed(_ sender: UIButton) {
+        model.C()
+        refreshView()
+    }
+    
+    
+    @IBOutlet weak var divideButton: ToggleButton!
+    @IBOutlet weak var multiplyButton: ToggleButton!
+    @IBOutlet weak var plusButton: ToggleButton!
+    @IBOutlet weak var minusButton: ToggleButton!
+    
+    
+    
+    @IBAction func onPlusBtnPressed(_ sender: UIButton)
+    {
+        model.MATH_ACTIONS(newSign: "+")
+        refreshView()
+    }
+    
+    @IBAction func onMinusBtnPressed(_ sender: UIButton)
+    {
+        model.MATH_ACTIONS(newSign: "-")
+        refreshView()
+    }
+    
+    @IBAction func onMultiplyBtnPressed(_ sender: UIButton)
+    {
+        model.MATH_ACTIONS(newSign: "*")
+        refreshView()
+    }
+    @IBAction func onDivideBtnPressed(_ sender: UIButton)
+    {
+        model.MATH_ACTIONS(newSign: "/")
+
+        refreshView()
+    }
+    
+    
+    
+    @IBAction func onEqualPressed(_ sender: UIButton)
+    {
+        model.EQUAL()
+        refreshView()
+    }
+    
+    @IBAction func onDotBtnPressed(_ sender: UIButton)
+    {
+        model.NUMBERS(".");
+        refreshView()
+    }
+    
+    @IBAction func DEL(_ sender: UIButton)
+    {
+        model.DEL();
+        refreshView();
+    }
+
+    
+    @IBAction func onPlus_MinusBtnPressed(_ sender: UIButton)
+    {
+        model.PLUS_MINUS()
+        refreshView()
+    }
+    func refreshView() {
+        print("refreshView()", model.currentState)
+        let isMathAction = model.currentState == calculationState.mathAction_Entered
+        plusButton.setToggled(isMathAction && model.currentMathAction == "+")
+        minusButton.setToggled(isMathAction && model.currentMathAction == "-")
+        divideButton.setToggled(isMathAction && model.currentMathAction == "/")
+        multiplyButton.setToggled(isMathAction && model.currentMathAction == "*")
+//        if (isMathAction)
+//        {
+//            switch model.currentMathAction {
+//            case "+":
+//                plusButton.setToggled()
+//            case "-":
+//                minusButton.setToggled()
+//            case "/":
+//                divideButton.setToggled()
+//            case "*":
+//                multiplyButton.setToggled()
+//            default:
+//                print("How have you done it?")
+//            }
+//        }
+        
+        switch model.currentState {
+        case .clear:
+            mainLabel.text = model.result
+        case .num1:
+            mainLabel.text = model.num1
+        case .num2:
+            mainLabel.text = model.num2
+        case .mathAction_Entered:
+            print(model.currentMathAction)
+            mainLabel.text = model.num1
+        case .result:
+            mainLabel.text = model.result
         }
     }
     
-    func PLUS_MINUS ()
-
-    {
-        if (currentState == calculationState.num1)
-        {
-            num1 *= -1;
-        }
-    }
-}
-
-
-enum calculationState
-{
-    case num1;
-    case num2;
-    case mathAction_Entered;
-    case result;
-    case clear;
-}
-
-class ViewController: UIViewController {
+    
+    
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        refreshView()
+        mainLabel.updateLabel()
     }
 
 

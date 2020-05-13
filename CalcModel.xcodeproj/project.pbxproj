@@ -7,16 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112C7A31244237B20056F18F /* CalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112C7A30244237B20056F18F /* CalculatorModel.swift */; };
+		112C7A3324436FFE0056F18F /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112C7A3224436FFE0056F18F /* ToggleButton.swift */; };
+		112C7A352445C1B80056F18F /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112C7A342445C1B80056F18F /* RoundedButton.swift */; };
+		112C7A3724463FE90056F18F /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112C7A3624463FE90056F18F /* CustomLabel.swift */; };
 		115EC416242BFD230004F2A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115EC415242BFD230004F2A1 /* AppDelegate.swift */; };
 		115EC418242BFD230004F2A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115EC417242BFD230004F2A1 /* SceneDelegate.swift */; };
 		115EC41A242BFD230004F2A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115EC419242BFD230004F2A1 /* ViewController.swift */; };
 		115EC41D242BFD230004F2A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115EC41B242BFD230004F2A1 /* Main.storyboard */; };
-		115EC420242BFD230004F2A1 /* CalcModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 115EC41E242BFD230004F2A1 /* CalcModel.xcdatamodeld */; };
 		115EC422242BFD260004F2A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 115EC421242BFD260004F2A1 /* Assets.xcassets */; };
 		115EC425242BFD260004F2A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 115EC423242BFD260004F2A1 /* LaunchScreen.storyboard */; };
 		115EC430242BFD260004F2A1 /* CalcModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115EC42F242BFD260004F2A1 /* CalcModelTests.swift */; };
 		115EC43B242BFD260004F2A1 /* CalcModelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115EC43A242BFD260004F2A1 /* CalcModelUITests.swift */; };
-		11D0EC422431186A00D46369 /* BigInt in Frameworks */ = {isa = PBXBuildFile; productRef = 11D0EC412431186A00D46369 /* BigInt */; };
+		11D95C8E244C770600FE6514 /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = 11D95C8D244C770600FE6514 /* DynamicColor */; };
+		11D95C90244C784A00FE6514 /* EqualButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D95C8F244C784A00FE6514 /* EqualButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +41,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		112C7A30244237B20056F18F /* CalculatorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorModel.swift; sourceTree = "<group>"; };
+		112C7A3224436FFE0056F18F /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = SOURCE_ROOT; };
+		112C7A342445C1B80056F18F /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		112C7A3624463FE90056F18F /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		115EC412242BFD230004F2A1 /* CalcModel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalcModel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		115EC415242BFD230004F2A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		115EC417242BFD230004F2A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		115EC419242BFD230004F2A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		115EC41C242BFD230004F2A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		115EC41F242BFD230004F2A1 /* CalcModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CalcModel.xcdatamodel; sourceTree = "<group>"; };
 		115EC421242BFD260004F2A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		115EC424242BFD260004F2A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		115EC426242BFD260004F2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +59,7 @@
 		115EC436242BFD260004F2A1 /* CalcModelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalcModelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		115EC43A242BFD260004F2A1 /* CalcModelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcModelUITests.swift; sourceTree = "<group>"; };
 		115EC43C242BFD260004F2A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		11D95C8F244C784A00FE6514 /* EqualButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11D0EC422431186A00D46369 /* BigInt in Frameworks */,
+				11D95C8E244C770600FE6514 /* DynamicColor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +118,11 @@
 				115EC421242BFD260004F2A1 /* Assets.xcassets */,
 				115EC423242BFD260004F2A1 /* LaunchScreen.storyboard */,
 				115EC426242BFD260004F2A1 /* Info.plist */,
-				115EC41E242BFD230004F2A1 /* CalcModel.xcdatamodeld */,
+				112C7A30244237B20056F18F /* CalculatorModel.swift */,
+				112C7A342445C1B80056F18F /* RoundedButton.swift */,
+				112C7A3224436FFE0056F18F /* ToggleButton.swift */,
+				112C7A3624463FE90056F18F /* CustomLabel.swift */,
+				11D95C8F244C784A00FE6514 /* EqualButton.swift */,
 			);
 			path = CalcModel;
 			sourceTree = "<group>";
@@ -150,7 +162,7 @@
 			);
 			name = CalcModel;
 			packageProductDependencies = (
-				11D0EC412431186A00D46369 /* BigInt */,
+				11D95C8D244C770600FE6514 /* DynamicColor */,
 			);
 			productName = CalcModel;
 			productReference = 115EC412242BFD230004F2A1 /* CalcModel.app */;
@@ -225,7 +237,7 @@
 			);
 			mainGroup = 115EC409242BFD230004F2A1;
 			packageReferences = (
-				11D0EC402431186A00D46369 /* XCRemoteSwiftPackageReference "BigInt" */,
+				11D95C8C244C770500FE6514 /* XCRemoteSwiftPackageReference "DynamicColor" */,
 			);
 			productRefGroup = 115EC413242BFD230004F2A1 /* Products */;
 			projectDirPath = "";
@@ -270,10 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11D95C90244C784A00FE6514 /* EqualButton.swift in Sources */,
 				115EC41A242BFD230004F2A1 /* ViewController.swift in Sources */,
+				112C7A3324436FFE0056F18F /* ToggleButton.swift in Sources */,
+				112C7A31244237B20056F18F /* CalculatorModel.swift in Sources */,
+				112C7A3724463FE90056F18F /* CustomLabel.swift in Sources */,
 				115EC416242BFD230004F2A1 /* AppDelegate.swift in Sources */,
-				115EC420242BFD230004F2A1 /* CalcModel.xcdatamodeld in Sources */,
 				115EC418242BFD230004F2A1 /* SceneDelegate.swift in Sources */,
+				112C7A352445C1B80056F18F /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +463,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3NZTY273D2;
 				INFOPLIST_FILE = CalcModel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -464,6 +481,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3NZTY273D2;
 				INFOPLIST_FILE = CalcModel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -598,36 +616,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		11D0EC402431186A00D46369 /* XCRemoteSwiftPackageReference "BigInt" */ = {
+		11D95C8C244C770500FE6514 /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/attaswift/BigInt";
+			repositoryURL = "https://github.com/yannickl/DynamicColor.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.1.0;
+				minimumVersion = 5.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		11D0EC412431186A00D46369 /* BigInt */ = {
+		11D95C8D244C770600FE6514 /* DynamicColor */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 11D0EC402431186A00D46369 /* XCRemoteSwiftPackageReference "BigInt" */;
-			productName = BigInt;
+			package = 11D95C8C244C770500FE6514 /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		115EC41E242BFD230004F2A1 /* CalcModel.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				115EC41F242BFD230004F2A1 /* CalcModel.xcdatamodel */,
-			);
-			currentVersion = 115EC41F242BFD230004F2A1 /* CalcModel.xcdatamodel */;
-			path = CalcModel.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 115EC40A242BFD230004F2A1 /* Project object */;
 }
